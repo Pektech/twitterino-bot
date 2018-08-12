@@ -1,0 +1,16 @@
+<html>
+   <head>
+      <title>{{ title }}</title>
+   </head>
+   <body>
+    <center>
+    <p><strong>Posts in MongoDB</strong></p>
+     <table border="1">
+      <tr><td>ID</td><td>Screen Name</td><td>Tweet</td><td>Timestamp</td></tr>
+       {% for item in items %}
+         <tr><td>{{ item["_id"] }}</td><td>{{ escape(item["Screen Name"]) }}</td><td>{{ escape(item["Tweet"]) }}</td><td>{{ item["Timestamp"] }}</td></tr>
+       {% end %}
+     </table>
+    </center>
+   </body>
+ </html>
