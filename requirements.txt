@@ -2,3 +2,5 @@ tweepy
 pymongo
 matplotlib
 tornado
+flask
+flask_wtf
