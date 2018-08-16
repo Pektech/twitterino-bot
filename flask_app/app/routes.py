@@ -1,4 +1,4 @@
-from app import app, db
+from flask_app.app import app
 from flask import render_template, request,flash, session
 from .models import User, Tweets
 from .utils import ip_logging

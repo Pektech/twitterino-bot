@@ -1,4 +1,4 @@
-from app import db
+from flask_app.app import db
 from .models import User, Tweets
 from flask import request, flash
 from functools import wraps
@@ -42,5 +42,6 @@ def ip_logging(func):
                   "| Remote IP: {3})".format(
             timestamp, "Users", x_real_ip, remote_ip)
         flash(message)
+
         return func(*args, **kwargs)
     return decorated_function
