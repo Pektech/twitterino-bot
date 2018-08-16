@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<p><strong>Usernames in Sqlite</strong></p>
+
+    {% for user in users %}
+    <ul>
+        {{ user.screen_name }}
+    </ul>
+    {% endfor %}
+
+
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+
+
+
+{% block content %}
+
+
+    <p><strong>Posts in Sqlite</strong></p>
+     <table border="1">
+      <thead>
+      <tr><td>ID</td><td>Screen Name</td><td>Info</td></tr>
+      </thead>
+         <tbody>
+       {% for post in posts %}
+        <tr><td>{{ post.id }}</td><td>{{ post.screen_name }}</td><td><table border="1">
+            <thead>
+                <tr><th>Tweet</th><th>Hash Tag</th><th>Date</th></tr>
+              </thead>
+                <tbody><tr>
+                {% for item in post.tweets %}
+                <td>{{ item.twt_text }}</td>
+                <td>{{ item.twt_hash }}</td>
+                    <td>{{ item.twt_date }}</td></tr>
+
+             {% endfor %}
+</tbody>
+        </table></td></tr>
+
+       {% endfor %}
+         </tbody>
+     </table>
+
+{{posts}}
+{% endblock %}
