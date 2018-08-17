@@ -31,5 +31,16 @@
          </tbody>
      </table>
 
-{{posts}}
+{#{% for post in posts %}#}
+{#    <p> {{ post.id, post.screen_name }}</p>#}
+{#        {% for item in post.tweets %}#}
+{#           <p> {{ item.twt_text, item.twt_hash, item.twt_date}}#}
+{#        {% endfor %} </p>#}
+{#{% endfor %}#}
+    {% if prev_url %}
+    <a href="{{ prev_url }}">Newer posts</a>
+    {% endif %}
+    {% if next_url %}
+    <a href="{{ next_url }}">Older posts</a>
+    {% endif %}
 {% endblock %}

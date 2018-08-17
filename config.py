@@ -12,6 +12,7 @@ auth.set_access_token ( access_token, access_token_secret )
 api = tweepy.API(auth, wait_on_rate_limit=True)
 # MongoDB info
 client = MongoClient('127.0.0.1', 27017)
+#client = MongoClient('192.168.1.15', 46664)
 db = client.information
 username_collection = db.friendos
 posts_collection = db.posts
